@@ -6,7 +6,7 @@
 i1 = 33  #integer 1
 i2 = 48
 i3 = 65
-i4 = 65+25
+i4 = i3+25
 i5 = 97
 #output
 print("Integers")
