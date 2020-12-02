@@ -1,0 +1,9 @@
+- initials.py
+- colors16.py (Python trinket. see code below.) (https://trinket.io/python (Links to an external site.))
+- variables-1.py (See update)
+- forloop-1.py
+- asc2.py (Code posted below)
+- functionDemo.py (edpuzzle.com)
+- dec-hex.py (edpuzzle.com)
+- dec-bin.py (edpuzzle.com)
+- while-loop.py (edpuzzle.com)
