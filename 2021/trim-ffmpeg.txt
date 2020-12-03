@@ -1,0 +1,2 @@
+ffmpeg -i mariadb-deb10.mkv -ss 00:00:03 -t 00:07:0 -async 1 mariadb-deb10-7-min.mkv
+

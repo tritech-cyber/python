@@ -1,0 +1,4 @@
+Use this to deplay
+sleep 10;echo -ne '\007'; ffmpeg -f alsa -i default -video_size 1920x1080 -framerate 30 -f x11grab -i :1 -c:v libx264 -qp 0 -preset ultrafast ex1.mkv
+
+sleep 10;echo -ne '\007'; ffmpeg -f alsa -i default -video_size 1920x1080 -framerate 30 -f x11grab -i :1 -c:v libx264 -qp 0 -preset ultrafast capture3.mkv
