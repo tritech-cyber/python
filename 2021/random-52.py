@@ -3,8 +3,6 @@
 # to get a '0' as the first integer displayed
 import random
 
-def checklist(number,clist):
-	# true is 1 and false is 0
 
 def main():
 	cardslist = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,
@@ -13,8 +11,10 @@ def main():
              
 	for i in range (1,53): 
 	 n =  random.randint(1,52)
-	 available = checklist(n,cardlist)
 	 print(n," ",end="")
 	 if(i % 10 == 0):
 		 print(" * ")
 	print("\n\t\t",i,"<- last i - - - \n\n")
+
+
+main()
