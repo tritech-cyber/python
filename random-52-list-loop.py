@@ -8,8 +8,22 @@
 # Once a number is taken fro nlist a -1 put in it's place.
 # 
 import random
+
+def checkorder(s,olist):
+	mlist =[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+			-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
+			-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1-1,-1]
+	for n in range(0,52):
+		if (olist[n] == n):
+			mlist[n] = 1
+			s = s + 1
+			#print (" match ",n)
+		else:
+			mlist[n] = 0
+	
+	return s,mlist
 			
-def main():
+def shuffle(ordersum):
 	nlist = [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,
              21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,
              41,42,43,44,45,46,47,48,49,50,51,51] 
@@ -33,11 +47,29 @@ def main():
 				nlist[n] = -1
 				count = count + 1
 				done = 1
-	print(" nlist *****")
-	print(nlist)
-	print(" zlist *****")
-	print(zlist)
-	print("Total Random ",totalrandom)
-
+	#print(" nlist *****")
+	#print(nlist)
+	#print(" zlist *****")
+	#print(zlist)
+	#print("Total Random ",totalrandom)
 	
-main()
+	osum, nlist = checkorder(ordersum,zlist)
+	#print("ordersum ",osum)
+	return osum
+	
+def main():
+	count = 0
+	count2 = 1
+	matchesmax = 0
+	while(1):
+		count = count + 1
+		if (count > 9223372036854775806):  # 9,223,372,036,854,775,806
+			count2 = count2 + 1
+			count = 0
+		matches = shuffle(0)
+		if matches > matchesmax:
+			matchesmax = matches
+			print("Maximum matches = " +str(matchesmax)+" from "+str(count)+ " shuffles multiplied " + str(count2))
+	
+if __name__ == "__main__":	
+	main()
