@@ -50,7 +50,7 @@ def shuffle(ordersum):
 	#print(" nlist *****")
 	#print(nlist)
 	#print(" zlist *****")
-	#print(zlist)
+	print(zlist)
 	#print("Total Random ",totalrandom)
 	
 	osum, nlist = checkorder(ordersum,zlist)
